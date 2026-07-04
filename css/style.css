@@ -1108,58 +1108,27 @@ p.hero__eyebrow {
   margin-bottom: 16px;
 }
 
-.tint-demo {
-  background: var(--ink-2);
+.tint-embed {
+  background: #0a0a0a;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: clamp(16px, 2.4vw, 28px);
+  overflow: hidden;
 }
-.tint-demo svg { width: 100%; height: auto; display: block; }
-.tint-overlay { transition: opacity 0.5s var(--ease-out); }
-
-.tint-demo__readout {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 26px;
-  color: var(--white);
-  margin: 14px 2px 12px;
-  font-variant-numeric: tabular-nums;
+.tint-embed iframe {
+  display: block;
+  width: 100%;
+  height: 480px;
+  border: 0;
 }
-.tint-demo__readout em {
-  font-style: normal;
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 14px;
+.tint-embed__link { margin-top: 12px; font-size: 14px; }
+.tint-embed__link a {
   color: var(--cyan);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-left: 12px;
-}
-
-.tint-demo__controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.tint-demo__controls button {
-  font-family: var(--font-body);
   font-weight: 700;
-  font-size: 14px;
-  color: var(--text);
-  background: transparent;
-  border: 1.5px solid var(--line);
-  border-radius: 100px;
-  padding: 9px 16px;
-  min-height: 40px;
-  cursor: pointer;
-  transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.25s var(--ease-spring);
+  text-decoration: none;
 }
-.tint-demo__controls button:hover { border-color: var(--cyan); color: var(--cyan); }
-.tint-demo__controls button:active { transform: scale(0.94); }
-.tint-demo__controls button.is-selected {
-  background: var(--cyan);
-  border-color: var(--cyan);
-  color: var(--ink);
+.tint-embed__link a:hover { text-decoration: underline; }
+@media (max-width: 560px) {
+  .tint-embed iframe { height: 400px; }
 }
 
 .product__title {

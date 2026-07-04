@@ -63,36 +63,10 @@
         <article class="product">
           <div class="product__demo reveal">
             <p class="product__demo-label">Live demo — click a tint level</p>
-            <div class="tint-demo" id="tintDemo">
-              <svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Car side view with adjustable window tint">
-                <!-- ground -->
-                <rect x="20" y="228" width="520" height="3" rx="1.5" fill="rgba(255,255,255,0.12)"/>
-                <!-- body -->
-                <path d="M60 190 Q60 158 96 150 L150 140 Q200 92 268 88 L340 88 Q404 92 442 138 L488 148 Q516 154 518 178 L520 196 Q520 210 504 210 L86 210 Q60 210 60 190 Z" fill="#26262b" stroke="rgba(255,255,255,0.14)" stroke-width="2"/>
-                <!-- cabin glass: front + rear windows -->
-                <path class="tint-glass" d="M178 142 L262 100 L262 142 Z M276 100 L276 142 L420 142 Q395 108 340 100 Z" fill="#9fd8ef"/>
-                <path class="tint-overlay" d="M178 142 L262 100 L262 142 Z M276 100 L276 142 L420 142 Q395 108 340 100 Z" fill="#08080a" opacity="0.3"/>
-                <!-- window trim -->
-                <path d="M165 146 L268 94 L345 94 Q406 102 432 146 Z" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="3" stroke-linejoin="round"/>
-                <!-- wheels -->
-                <circle cx="150" cy="208" r="30" fill="#111114" stroke="rgba(255,255,255,0.2)" stroke-width="3"/>
-                <circle cx="150" cy="208" r="12" fill="none" stroke="#43c6ec" stroke-width="2.5"/>
-                <circle cx="430" cy="208" r="30" fill="#111114" stroke="rgba(255,255,255,0.2)" stroke-width="3"/>
-                <circle cx="430" cy="208" r="12" fill="none" stroke="#43c6ec" stroke-width="2.5"/>
-                <!-- lights -->
-                <rect x="506" y="168" width="12" height="8" rx="3" fill="#faed25"/>
-                <rect x="60" y="170" width="10" height="7" rx="3" fill="#ff5d5d" opacity="0.8"/>
-              </svg>
-              <div class="tint-demo__readout"><span id="tintValue">30</span>% VLT <em id="tintName">Factory</em></div>
-              <div class="tint-demo__controls" role="group" aria-label="Tint level">
-                <button type="button" data-vlt="70" data-name="Light smoke">70%</button>
-                <button type="button" data-vlt="50" data-name="Smoke">50%</button>
-                <button type="button" data-vlt="35" data-name="Classic">35%</button>
-                <button type="button" data-vlt="20" data-name="Dark">20%</button>
-                <button type="button" data-vlt="15" data-name="Deep">15%</button>
-                <button type="button" data-vlt="5" data-name="Limo">5%</button>
-              </div>
+            <div class="tint-embed">
+              <iframe src="demo/tint-selector.html?embed=1" title="Window Tint Selector live demo" loading="lazy"></iframe>
             </div>
+            <p class="tint-embed__link"><a href="demo/tint-selector.html" target="_blank" rel="noopener">Open the full-screen demo ↗</a></p>
           </div>
 
           <div class="product__info">

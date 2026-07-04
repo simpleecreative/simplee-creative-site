@@ -166,25 +166,6 @@
     });
   }
 
-  /* ---------- store: tint selector demo ---------- */
-  const tintDemo = document.getElementById("tintDemo");
-  if (tintDemo) {
-    const overlay = tintDemo.querySelector(".tint-overlay");
-    const valueEl = document.getElementById("tintValue");
-    const nameEl = document.getElementById("tintName");
-    tintDemo.querySelectorAll("[data-vlt]").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const vlt = parseInt(btn.dataset.vlt, 10);
-        overlay.style.opacity = ((100 - vlt) / 100) * 0.92;
-        valueEl.textContent = vlt;
-        nameEl.textContent = btn.dataset.name;
-        tintDemo.querySelectorAll("[data-vlt]").forEach((b) =>
-          b.classList.toggle("is-selected", b === btn));
-      });
-    });
-    tintDemo.querySelector('[data-vlt="35"]').click();
-  }
-
   /* ---------- store: buy buttons ---------- */
   // Paste each product's Stripe Payment Link here once created in the
   // Stripe dashboard. Until then the button routes to the contact form.
