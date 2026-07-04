@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Store — Simplee Creative | Ready-Made Website Integrations</title>
+  <meta name="description" content="Ready-made interactive website integrations from Simplee Creative — like our window tint selector — installed and customized for your site.">
+  <link rel="icon" type="image/png" href="assets/brand/sc-logo-bg.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Simplee Creative — home">
+        <img src="assets/brand/sc-logo-alt.png" alt="Simplee Creative logo" width="44" height="44">
+        <span>Simplee<em>Creative</em></span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#work">Work</a>
+        <a href="store.html" class="is-active" aria-current="page">Store</a>
+        <a href="index.html#about">About</a>
+      </nav>
+      <a href="index.html#contact" class="btn btn--primary nav__cta magnetic">Start a project</a>
+      <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="Mobile">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#work">Work</a>
+      <a href="store.html">Store</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact" class="mobile-menu__cta">Start a project</a>
+    </nav>
+  </div>
+
+  <main id="top">
+
+    <!-- ============ STORE HERO ============ -->
+    <section class="store-hero">
+      <div class="container">
+        <p class="hero__eyebrow reveal-line"><span class="tick" aria-hidden="true"></span><span class="hero__eyebrow-text">The Simplee Store</span></p>
+        <h1 class="store-hero__title reveal-line">Ready-made integrations.<br><span class="outline">Custom-fit to your site.</span></h1>
+        <p class="store-hero__sub reveal-line">Interactive features we've already built, battle-tested, and priced — installed on your website and styled to your brand in days, not weeks.</p>
+      </div>
+    </section>
+
+    <!-- ============ PRODUCT: TINT SELECTOR ============ -->
+    <section class="section product-section" id="tint-selector">
+      <div class="container">
+        <article class="product">
+          <div class="product__demo reveal">
+            <p class="product__demo-label">Live demo — click a tint level</p>
+            <div class="tint-demo" id="tintDemo">
+              <svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Car side view with adjustable window tint">
+                <!-- ground -->
+                <rect x="20" y="228" width="520" height="3" rx="1.5" fill="rgba(255,255,255,0.12)"/>
+                <!-- body -->
+                <path d="M60 190 Q60 158 96 150 L150 140 Q200 92 268 88 L340 88 Q404 92 442 138 L488 148 Q516 154 518 178 L520 196 Q520 210 504 210 L86 210 Q60 210 60 190 Z" fill="#26262b" stroke="rgba(255,255,255,0.14)" stroke-width="2"/>
+                <!-- cabin glass: front + rear windows -->
+                <path class="tint-glass" d="M178 142 L262 100 L262 142 Z M276 100 L276 142 L420 142 Q395 108 340 100 Z" fill="#9fd8ef"/>
+                <path class="tint-overlay" d="M178 142 L262 100 L262 142 Z M276 100 L276 142 L420 142 Q395 108 340 100 Z" fill="#08080a" opacity="0.3"/>
+                <!-- window trim -->
+                <path d="M165 146 L268 94 L345 94 Q406 102 432 146 Z" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="3" stroke-linejoin="round"/>
+                <!-- wheels -->
+                <circle cx="150" cy="208" r="30" fill="#111114" stroke="rgba(255,255,255,0.2)" stroke-width="3"/>
+                <circle cx="150" cy="208" r="12" fill="none" stroke="#43c6ec" stroke-width="2.5"/>
+                <circle cx="430" cy="208" r="30" fill="#111114" stroke="rgba(255,255,255,0.2)" stroke-width="3"/>
+                <circle cx="430" cy="208" r="12" fill="none" stroke="#43c6ec" stroke-width="2.5"/>
+                <!-- lights -->
+                <rect x="506" y="168" width="12" height="8" rx="3" fill="#faed25"/>
+                <rect x="60" y="170" width="10" height="7" rx="3" fill="#ff5d5d" opacity="0.8"/>
+              </svg>
+              <div class="tint-demo__readout"><span id="tintValue">30</span>% VLT <em id="tintName">Factory</em></div>
+              <div class="tint-demo__controls" role="group" aria-label="Tint level">
+                <button type="button" data-vlt="70" data-name="Light smoke">70%</button>
+                <button type="button" data-vlt="50" data-name="Smoke">50%</button>
+                <button type="button" data-vlt="35" data-name="Classic">35%</button>
+                <button type="button" data-vlt="20" data-name="Dark">20%</button>
+                <button type="button" data-vlt="15" data-name="Deep">15%</button>
+                <button type="button" data-vlt="5" data-name="Limo">5%</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product__info">
+            <p class="section__eyebrow reveal">Flagship integration</p>
+            <h2 class="product__title reveal">Window Tint Selector</h2>
+            <p class="product__price reveal"><strong>$200</strong> one-time · installed on your site</p>
+            <p class="product__desc reveal">Let customers preview tint shades on a car before they ever call. Built for tint shops and auto detailers — visitors pick a VLT percentage, watch the windows change in real time, and send their pick straight to your booking form. Fewer "what does 20% look like?" calls, more booked jobs.</p>
+            <ul class="product__includes reveal">
+              <li>Installed and working on your existing website</li>
+              <li>Styled to match your brand — colors, fonts, logo</li>
+              <li>Tint levels configured to what you actually sell</li>
+              <li>Works on phones, tablets, and desktop</li>
+              <li>30 days of post-install support</li>
+            </ul>
+            <div class="product__actions reveal">
+              <a href="#" class="btn btn--primary btn--lg magnetic" data-buy data-product="Window Tint Selector">Buy now — $200
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+              </a>
+              <a href="index.html#contact" class="btn btn--ghost btn--lg magnetic">Ask about this</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- custom build card -->
+        <div class="custom-card reveal">
+          <div>
+            <h3>Have something different in mind?</h3>
+            <p>Every integration here started as one client's idea. Tell us yours — calculators, configurators, booking tools, galleries — and we'll build it custom.</p>
+          </div>
+          <a href="index.html#contact" class="btn btn--ink magnetic">Request a custom build
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="index.html" class="footer__logo" aria-label="Simplee Creative home">
+        <img src="assets/brand/sc-logo-alt.png" alt="" width="36" height="36">
+        <span>Simplee<em>Creative</em></span>
+      </a>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#work">Work</a>
+        <a href="store.html">Store</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <p class="footer__copy">© <span id="year"></span> Simplee Creative. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

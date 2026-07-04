@@ -166,6 +166,56 @@
     });
   }
 
+  /* ---------- store: tint selector demo ---------- */
+  const tintDemo = document.getElementById("tintDemo");
+  if (tintDemo) {
+    const overlay = tintDemo.querySelector(".tint-overlay");
+    const valueEl = document.getElementById("tintValue");
+    const nameEl = document.getElementById("tintName");
+    tintDemo.querySelectorAll("[data-vlt]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const vlt = parseInt(btn.dataset.vlt, 10);
+        overlay.style.opacity = ((100 - vlt) / 100) * 0.92;
+        valueEl.textContent = vlt;
+        nameEl.textContent = btn.dataset.name;
+        tintDemo.querySelectorAll("[data-vlt]").forEach((b) =>
+          b.classList.toggle("is-selected", b === btn));
+      });
+    });
+    tintDemo.querySelector('[data-vlt="35"]').click();
+  }
+
+  /* ---------- store: buy buttons ---------- */
+  // Paste each product's Stripe Payment Link here once created in the
+  // Stripe dashboard. Until then the button routes to the contact form.
+  const STRIPE_LINKS = {
+    "Window Tint Selector": "",
+  };
+  document.querySelectorAll("[data-buy]").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const product = btn.dataset.product;
+      const link = STRIPE_LINKS[product];
+      if (link) {
+        btn.href = link;
+        return; // follow the Stripe Payment Link
+      }
+      e.preventDefault();
+      window.location.href =
+        `index.html#contact?product=${encodeURIComponent(product)}`;
+    });
+  });
+
+  // If arriving at the contact form with a product in the URL, pre-fill it.
+  const productParam = new URLSearchParams(
+    (window.location.hash.split("?")[1] || window.location.search.slice(1))
+  ).get("product");
+  const msgField = document.getElementById("f-msg");
+  if (productParam && msgField && !msgField.value) {
+    msgField.value = `Hi — I'd like to buy the ${productParam} integration for my website.`;
+    const needSelect = document.getElementById("f-need");
+    if (needSelect) needSelect.value = "Website";
+  }
+
   /* ---------- contact form ---------- */
   const form = document.getElementById("contactForm");
   if (form) {
