@@ -153,6 +153,33 @@
     stats.forEach((el) => statIO.observe(el));
   }
 
+  /* ---------- store: price count-up ---------- */
+  const priceCounts = document.querySelectorAll(".price-count");
+  if (priceCounts.length) {
+    const animatePrice = (el) => {
+      const target = parseInt(el.dataset.count, 10);
+      if (reduceMotion) { el.textContent = target; return; }
+      const dur = 1100;
+      const t0 = performance.now();
+      const tick = (now) => {
+        const p = Math.min((now - t0) / dur, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * eased);
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+    const priceIO = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animatePrice(entry.target);
+          priceIO.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.6 });
+    priceCounts.forEach((el) => priceIO.observe(el));
+  }
+
   /* ---------- magnetic buttons (desktop only) ---------- */
   if (finePointer && !reduceMotion) {
     document.querySelectorAll(".magnetic").forEach((el) => {
