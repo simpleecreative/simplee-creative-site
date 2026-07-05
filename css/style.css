@@ -1248,6 +1248,15 @@ p.hero__eyebrow {
 
 .store-hero { position: relative; overflow: hidden; }
 .store-hero__bg { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.store-hero__bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(ellipse 85% 75% at 55% 32%, transparent 0%, transparent 38%, var(--ink) 88%),
+    linear-gradient(to bottom, transparent 0%, transparent 45%, var(--ink) 100%);
+}
 .store-hero .container { position: relative; z-index: 1; }
 .store-hero__bg .hero__glow--cyan { animation: glowDriftA 15s ease-in-out infinite; }
 .store-hero__bg .hero__glow--yellow { animation: glowDriftB 18s ease-in-out infinite; }
