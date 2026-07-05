@@ -6,7 +6,7 @@
 
 header('Content-Type: application/json');
 
-const RECIPIENT = 'dylanlspies@gmail.com';
+const RECIPIENT = 'simpleecreative.com@gmail.com';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);

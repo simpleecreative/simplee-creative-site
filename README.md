@@ -16,7 +16,7 @@ One-page studio site. Pure HTML/CSS/JS — no build step, no frameworks. Open `i
 - **Work card names** — guessed from logo filenames (Corn Belt, North Star, PAT, Motion Server, The Forge). Correct as needed.
 
 ## Contact form
-The form validates client-side, then opens the visitor's email app with a pre-filled message to `dylanlspies@gmail.com` (no backend needed). For a proper submit-in-page form, create a free [Formspree](https://formspree.io) endpoint and replace the `mailto:` logic at the bottom of `js/main.js`.
+The form validates client-side, then opens the visitor's email app with a pre-filled message to `simpleecreative.com@gmail.com` (no backend needed). For a proper submit-in-page form, create a free [Formspree](https://formspree.io) endpoint and replace the `mailto:` logic at the bottom of `js/main.js`.
 
 ## Brand tokens
 Ink `#0D0D0F` · Surface `#191919` · Cyan `#43C6EC` · Yellow `#FAED25` · Bone `#F4F4F1`

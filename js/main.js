@@ -256,7 +256,7 @@
       const body = encodeURIComponent(
         `Name: ${fields.name.value.trim()}\nEmail: ${fields.email.value.trim()}\nBusiness: ${biz || "—"}\nNeeds: ${need}\n\n${fields.msg.value.trim()}`
       );
-      window.location.href = `mailto:dylanlspies@gmail.com?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:simpleecreative.com@gmail.com?subject=${subject}&body=${body}`;
     };
 
     form.addEventListener("submit", async (e) => {
