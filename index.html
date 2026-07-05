@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=8">
+  <link rel="stylesheet" href="css/style.css?v=9">
 </head>
 <body>
 
@@ -277,21 +277,6 @@
       </div>
     </section>
 
-    <!-- ============ STORE TEASER ============ -->
-    <section class="section store-teaser" aria-label="Simplee Store">
-      <div class="container">
-        <div class="store-teaser__band reveal">
-          <div>
-            <h2>New — the <span>Simplee Store</span></h2>
-            <p>Ready-made interactive integrations like our window tint selector, installed on your site and styled to your brand. Fixed price, fast turnaround.</p>
-          </div>
-          <a href="store.html" class="btn btn--primary btn--lg magnetic">Browse integrations
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
-          </a>
-        </div>
-      </div>
-    </section>
-
     <!-- ============ CLIENT WALL ============ -->
     <section class="clients" aria-label="Brands we've worked with">
       <div class="container">
@@ -337,37 +322,17 @@
         </div>
 
         <div class="pricing__toggle reveal" role="tablist" aria-label="Pricing options">
-          <button type="button" class="pricing__tab is-active" role="tab" aria-selected="true" aria-controls="pricing-onetime" data-pricing-tab="onetime">One-time buyout</button>
-          <button type="button" class="pricing__tab" role="tab" aria-selected="false" aria-controls="pricing-plans" data-pricing-tab="plans">Monthly care plans</button>
+          <button type="button" class="pricing__tab is-active" role="tab" aria-selected="true" aria-controls="pricing-plans" data-pricing-tab="plans">Monthly care plans</button>
+          <button type="button" class="pricing__tab" role="tab" aria-selected="false" aria-controls="pricing-onetime" data-pricing-tab="onetime">One-time buyout</button>
         </div>
 
         <div class="pricing__panels">
-          <!-- ONE-TIME BUYOUT -->
-          <div class="pricing__panel is-active" id="pricing-onetime" role="tabpanel">
-            <div class="price-card price-card--buyout reveal">
-              <p class="price-card__badge">No recurring fees</p>
-              <h3 class="price-card__name">Full Buyout</h3>
-              <p class="price-card__price"><span>Starting at</span><strong>$<span class="price-count" data-count="600">0</span></strong><em>one-time</em></p>
-              <p class="price-card__desc">We design it, build it, and hand you the keys. It's yours outright — no monthly bill, ever.</p>
-              <ul class="price-card__list">
-                <li>Custom-designed, fully coded website</li>
-                <li>Every source file handed over — yours to keep</li>
-                <li>Set up on hosting of your choice</li>
-                <li>30 days of post-launch support included</li>
-                <li>Zero ongoing cost, forever</li>
-              </ul>
-              <a href="#contact" class="btn btn--primary btn--lg magnetic" data-plan="Full Buyout">Get a quote
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
-              </a>
-            </div>
-          </div>
-
           <!-- MONTHLY CARE PLANS -->
-          <div class="pricing__panel" id="pricing-plans" role="tabpanel" hidden>
+          <div class="pricing__panel is-active" id="pricing-plans" role="tabpanel">
             <div class="pricing__grid">
               <div class="price-card reveal">
                 <h3 class="price-card__name">Starter Care</h3>
-                <p class="price-card__price"><strong>$35</strong><em>/mo</em></p>
+                <p class="price-card__price"><span class="price-card__currency">$</span><strong>35</strong><em>/mo</em></p>
                 <p class="price-card__desc">Keep the lights on. Hosting, security, and small updates — handled.</p>
                 <ul class="price-card__list">
                   <li>Hosting &amp; domain management</li>
@@ -382,7 +347,7 @@
               <div class="price-card price-card--popular reveal">
                 <p class="price-card__ribbon">Most popular</p>
                 <h3 class="price-card__name">Growth Care</h3>
-                <p class="price-card__price"><strong>$60</strong><em>/mo</em></p>
+                <p class="price-card__price"><span class="price-card__currency">$</span><strong>60</strong><em>/mo</em></p>
                 <p class="price-card__desc">For businesses that update often and want it handled fast.</p>
                 <ul class="price-card__list">
                   <li>Everything in Starter Care</li>
@@ -398,7 +363,7 @@
 
               <div class="price-card reveal">
                 <h3 class="price-card__name">Pro Care</h3>
-                <p class="price-card__price"><strong>$100</strong><em>/mo</em></p>
+                <p class="price-card__price"><span class="price-card__currency">$</span><strong>100</strong><em>/mo</em></p>
                 <p class="price-card__desc">A full creative partner — your site and your socials, covered.</p>
                 <ul class="price-card__list">
                   <li>Everything in Growth Care</li>
@@ -411,9 +376,45 @@
               </div>
             </div>
           </div>
+
+          <!-- ONE-TIME BUYOUT -->
+          <div class="pricing__panel" id="pricing-onetime" role="tabpanel" hidden>
+            <div class="price-card price-card--buyout reveal">
+              <p class="price-card__badge">No recurring fees</p>
+              <h3 class="price-card__name">Full Buyout</h3>
+              <p class="price-card__from">Starting at</p>
+              <p class="price-card__price"><span class="price-card__currency">$</span><strong class="price-count" data-count="600">0</strong><em>one-time</em></p>
+              <p class="price-card__desc">We design it, build it, and hand you the keys. It's yours outright — no monthly bill, ever.</p>
+              <ul class="price-card__list">
+                <li>Custom-designed, fully coded website</li>
+                <li>Every source file handed over — yours to keep</li>
+                <li>Set up on hosting of your choice</li>
+                <li>30 days of post-launch support included</li>
+                <li>Zero ongoing cost, forever</li>
+              </ul>
+              <a href="#contact" class="btn btn--primary btn--lg magnetic" data-plan="Full Buyout">Get a quote
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+              </a>
+            </div>
+          </div>
         </div>
 
         <p class="pricing__note reveal">Not sure which fits? <a href="#contact">Let's talk it through →</a></p>
+      </div>
+    </section>
+
+    <!-- ============ STORE TEASER ============ -->
+    <section class="section store-teaser" aria-label="Simplee Store">
+      <div class="container">
+        <div class="store-teaser__band reveal">
+          <div>
+            <h2>New — the <span>Simplee Store</span></h2>
+            <p>Ready-made interactive integrations like our window tint selector, installed on your site and styled to your brand. Fixed price, fast turnaround.</p>
+          </div>
+          <a href="store.html" class="btn btn--primary btn--lg magnetic">Browse integrations
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          </a>
+        </div>
       </div>
     </section>
 
