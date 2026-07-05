@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=7">
+  <link rel="stylesheet" href="css/style.css?v=8">
 </head>
 <body>
 
@@ -27,6 +27,7 @@
         <a href="#services">Services</a>
         <a href="#work">Work</a>
         <a href="store.html">Store</a>
+        <a href="#pricing">Pricing</a>
         <a href="#process">Process</a>
         <a href="#about">About</a>
       </nav>
@@ -43,6 +44,7 @@
       <a href="#services">Services</a>
       <a href="#work">Work</a>
       <a href="store.html">Store</a>
+      <a href="#pricing">Pricing</a>
       <a href="#process">Process</a>
       <a href="#about">About</a>
       <a href="#contact" class="mobile-menu__cta">Start a project</a>
@@ -325,6 +327,96 @@
       </div>
     </section>
 
+    <!-- ============ PRICING ============ -->
+    <section class="section pricing" id="pricing">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__eyebrow">Pricing</p>
+          <h2 class="section__title">Own it outright.<br><span class="outline">Or grow with a plan.</span></h2>
+          <p class="pricing__lead reveal">Every project starts with the same real conversation and custom design. How you pay for what happens after launch is up to you.</p>
+        </div>
+
+        <div class="pricing__toggle reveal" role="tablist" aria-label="Pricing options">
+          <button type="button" class="pricing__tab is-active" role="tab" aria-selected="true" aria-controls="pricing-onetime" data-pricing-tab="onetime">One-time buyout</button>
+          <button type="button" class="pricing__tab" role="tab" aria-selected="false" aria-controls="pricing-plans" data-pricing-tab="plans">Monthly care plans</button>
+        </div>
+
+        <div class="pricing__panels">
+          <!-- ONE-TIME BUYOUT -->
+          <div class="pricing__panel is-active" id="pricing-onetime" role="tabpanel">
+            <div class="price-card price-card--buyout reveal">
+              <p class="price-card__badge">No recurring fees</p>
+              <h3 class="price-card__name">Full Buyout</h3>
+              <p class="price-card__price"><span>Starting at</span><strong>$<span class="price-count" data-count="1200">0</span></strong><em>one-time</em></p>
+              <p class="price-card__desc">We design it, build it, and hand you the keys. It's yours outright — no monthly bill, ever.</p>
+              <ul class="price-card__list">
+                <li>Custom-designed, fully coded website</li>
+                <li>Every source file handed over — yours to keep</li>
+                <li>Set up on hosting of your choice</li>
+                <li>30 days of post-launch support included</li>
+                <li>Zero ongoing cost, forever</li>
+              </ul>
+              <a href="#contact" class="btn btn--primary btn--lg magnetic" data-plan="Full Buyout">Get a quote
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- MONTHLY CARE PLANS -->
+          <div class="pricing__panel" id="pricing-plans" role="tabpanel" hidden>
+            <div class="pricing__grid">
+              <div class="price-card reveal">
+                <h3 class="price-card__name">Starter Care</h3>
+                <p class="price-card__price"><strong>$29</strong><em>/mo</em></p>
+                <p class="price-card__desc">Keep the lights on. Hosting, security, and small updates — handled.</p>
+                <ul class="price-card__list">
+                  <li>Hosting &amp; domain management</li>
+                  <li>Security monitoring &amp; nightly backups</li>
+                  <li>Uptime monitoring, 24/7</li>
+                  <li>1 content update per month</li>
+                  <li>Email support</li>
+                </ul>
+                <a href="#contact" class="btn btn--ghost magnetic" data-plan="Starter Care">Choose Starter</a>
+              </div>
+
+              <div class="price-card price-card--popular reveal">
+                <p class="price-card__ribbon">Most popular</p>
+                <h3 class="price-card__name">Growth Care</h3>
+                <p class="price-card__price"><strong>$79</strong><em>/mo</em></p>
+                <p class="price-card__desc">For businesses that update often and want it handled fast.</p>
+                <ul class="price-card__list">
+                  <li>Everything in Starter Care</li>
+                  <li>Unlimited content updates</li>
+                  <li>Monthly SEO &amp; performance check</li>
+                  <li>Priority support — 24hr response</li>
+                  <li>Quarterly design refresh</li>
+                </ul>
+                <a href="#contact" class="btn btn--primary magnetic" data-plan="Growth Care">Choose Growth
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+                </a>
+              </div>
+
+              <div class="price-card reveal">
+                <h3 class="price-card__name">Pro Care</h3>
+                <p class="price-card__price"><strong>$149</strong><em>/mo</em></p>
+                <p class="price-card__desc">A full creative partner — your site and your socials, covered.</p>
+                <ul class="price-card__list">
+                  <li>Everything in Growth Care</li>
+                  <li>Social media management add-on</li>
+                  <li>Monthly analytics report</li>
+                  <li>Dedicated point of contact</li>
+                  <li>New feature credit every quarter</li>
+                </ul>
+                <a href="#contact" class="btn btn--ghost magnetic" data-plan="Pro Care">Choose Pro</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="pricing__note reveal">Not sure which fits? <a href="#contact">Let's talk it through →</a></p>
+      </div>
+    </section>
+
     <!-- ============ PROCESS ============ -->
     <section class="process section" id="process">
       <div class="container">
@@ -506,6 +598,7 @@
         <a href="#services">Services</a>
         <a href="#work">Work</a>
         <a href="store.html">Store</a>
+        <a href="#pricing">Pricing</a>
         <a href="#process">Process</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
@@ -514,6 +607,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=5" defer></script>
+  <script src="js/main.js?v=6" defer></script>
 </body>
 </html>

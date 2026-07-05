@@ -180,6 +180,48 @@
     priceCounts.forEach((el) => priceIO.observe(el));
   }
 
+  /* ---------- pricing toggle ---------- */
+  const pricingTabs = document.querySelectorAll("[data-pricing-tab]");
+  if (pricingTabs.length) {
+    const pricingPanels = {
+      onetime: document.getElementById("pricing-onetime"),
+      plans: document.getElementById("pricing-plans"),
+    };
+    const revealNow = (panel) =>
+      panel.querySelectorAll(".reveal").forEach((el) => el.classList.add("in-view"));
+
+    pricingTabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const key = tab.dataset.pricingTab;
+        if (tab.classList.contains("is-active")) return;
+        pricingTabs.forEach((t) => {
+          const active = t === tab;
+          t.classList.toggle("is-active", active);
+          t.setAttribute("aria-selected", String(active));
+        });
+        Object.entries(pricingPanels).forEach(([k, panel]) => {
+          const show = k === key;
+          panel.hidden = !show;
+          panel.classList.toggle("is-active", show);
+          if (show) revealNow(panel);
+        });
+      });
+    });
+  }
+
+  /* ---------- pricing: plan CTA prefill ---------- */
+  document.querySelectorAll("[data-plan]").forEach((el) => {
+    el.addEventListener("click", () => {
+      const plan = el.dataset.plan;
+      const msg = document.getElementById("f-msg");
+      if (msg && !msg.value) {
+        msg.value = `Hi — I'd like to get started with the ${plan} option.`;
+      }
+      const needSelect = document.getElementById("f-need");
+      if (needSelect) needSelect.value = "Website";
+    });
+  });
+
   /* ---------- magnetic buttons (desktop only) ---------- */
   if (finePointer && !reduceMotion) {
     document.querySelectorAll(".magnetic").forEach((el) => {
