@@ -129,7 +129,7 @@ a { color: inherit; }
 .btn--ink:hover {
   background: var(--white);
   color: var(--ink);
-  box-shadow: 0 10px 36px rgba(13, 13, 15, 0.3);
+  box-shadow: 0 10px 36px rgba(13, 13, 15, 0.3), 0 0 40px rgba(250, 237, 37, 0.35);
 }
 
 .btn--lg { padding: 17px 34px; font-size: 16px; }
@@ -1682,6 +1682,15 @@ p.hero__eyebrow {
   transition-delay: var(--d, 0s);
 }
 .reveal.in-view { opacity: 1; transform: none; }
+/* .reveal's own transition shorthand (0.8s, meant for the one-time
+   entrance fade) otherwise wins over .btn's fast spring transition at
+   equal specificity — starving magnetic/hover response on any button
+   that also happens to carry .reveal. Restore the button's own timing
+   once the entrance has played. */
+.btn.reveal.in-view {
+  transition: transform 0.3s var(--ease-spring), background-color 0.25s,
+              color 0.25s, border-color 0.25s, box-shadow 0.3s;
+}
 
 /* ---------- focus ---------- */
 :focus-visible {
