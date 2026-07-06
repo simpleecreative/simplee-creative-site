@@ -72,14 +72,18 @@
       const words = ["websites", "logos", "brands", "content"];
       let i = 0;
       setInterval(() => {
+        rotator.classList.remove("is-in");
         rotator.classList.add("is-out");
         setTimeout(() => {
           i = (i + 1) % words.length;
           rotator.textContent = words[i];
           fitRotator();
           rotator.classList.remove("is-out");
+          rotator.classList.add("is-in-from");
+          void rotator.offsetWidth; // force reflow so the "from" state paints before transitioning
+          rotator.classList.remove("is-in-from");
           rotator.classList.add("is-in");
-        }, 300);
+        }, 260);
       }, 2600);
     }
   }

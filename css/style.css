@@ -354,13 +354,20 @@ p.hero__eyebrow {
 .hero__rotator { display: inline-block; }
 .hero__rotator.is-out {
   opacity: 0;
-  transform: translateY(-0.35em);
-  transition: opacity 0.28s ease-in, transform 0.28s ease-in;
+  transform: translateX(0.5em) scale(0.96);
+  filter: blur(3px);
+  transition: opacity 0.26s ease-in, transform 0.26s ease-in, filter 0.26s ease-in;
+}
+.hero__rotator.is-in-from {
+  opacity: 0;
+  transform: translateX(-0.6em) scale(0.94);
+  filter: blur(4px);
 }
 .hero__rotator.is-in {
   opacity: 1;
-  transform: none;
-  transition: opacity 0.34s var(--ease-out), transform 0.34s var(--ease-out);
+  transform: translateX(0) scale(1);
+  filter: blur(0);
+  transition: opacity 0.62s var(--ease-out), transform 0.62s var(--ease-out), filter 0.62s var(--ease-out);
 }
 
 .hero__sub {
