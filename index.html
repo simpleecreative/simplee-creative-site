@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=13">
+  <link rel="stylesheet" href="css/style.css?v=32">
 </head>
 <body>
 
@@ -33,13 +33,14 @@
       </nav>
       <a href="#contact" class="btn btn--primary nav__cta magnetic">Start a project</a>
       <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-        <span></span><span></span>
+        <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
   <!-- Mobile menu -->
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <p class="mobile-menu__eyebrow"><span class="tick" aria-hidden="true"></span>Menu</p>
     <nav aria-label="Mobile">
       <a href="#services">Services</a>
       <a href="#work">Work</a>
@@ -47,8 +48,10 @@
       <a href="#pricing">Pricing</a>
       <a href="#process">Process</a>
       <a href="#about">About</a>
-      <a href="#contact" class="mobile-menu__cta">Start a project</a>
     </nav>
+    <a href="#contact" class="btn btn--primary btn--lg magnetic mobile-menu__cta">Start a project
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+    </a>
   </div>
 
   <main id="top">
@@ -111,111 +114,101 @@
           <h2 class="section__title">Everything your brand needs.<br><span class="outline">Nothing it doesn't.</span></h2>
         </div>
 
-        <div class="services__list">
-          <div class="service reveal" data-service>
-            <button class="service__row" aria-expanded="false">
-              <span class="service__num">01</span>
-              <span class="service__name">Web Design &amp; Development</span>
-              <span class="service__icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        <div class="services__grid">
+          <article class="service-card service-card--cyan reveal">
+            <div class="service-card__top">
+              <span class="service-card__badge" aria-hidden="true">
+                <span class="service-card__ring"></span>
+                <span class="service-card__icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg>
+                </span>
               </span>
-            </button>
-            <div class="service__body">
-              <div class="service__body-inner">
-                <p>Custom websites designed to convert — fast, mobile-first, and built around your business goals. No bloated templates, no cookie-cutter layouts.</p>
-                <ul>
-                  <li>Custom design &amp; build</li>
-                  <li>Mobile-first &amp; lightning fast</li>
-                  <li>SEO foundations included</li>
-                  <li>Hosting &amp; maintenance available</li>
-                </ul>
-              </div>
             </div>
-          </div>
+            <h3 class="service-card__title">Web Design &amp; Development</h3>
+            <p class="service-card__desc">Custom websites designed to convert — fast, mobile-first, and built around your business goals. No bloated templates, no cookie-cutter layouts.</p>
+            <ul class="service-card__list">
+              <li>Custom design &amp; build</li>
+              <li>Mobile-first &amp; lightning fast</li>
+              <li>SEO foundations included</li>
+              <li>Hosting &amp; maintenance available</li>
+            </ul>
+          </article>
 
-          <div class="service reveal" data-service>
-            <button class="service__row" aria-expanded="false">
-              <span class="service__num">02</span>
-              <span class="service__name">Logo &amp; Brand Identity</span>
-              <span class="service__icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          <article class="service-card service-card--yellow reveal">
+            <div class="service-card__top">
+              <span class="service-card__badge" aria-hidden="true">
+                <span class="service-card__ring"></span>
+                <span class="service-card__icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.4 6.6L21 12l-6.6 2.4L12 21l-2.4-6.6L3 12l6.6-2.4z"/></svg>
+                </span>
               </span>
-            </button>
-            <div class="service__body">
-              <div class="service__body-inner">
-                <p>A logo is a mark. A brand is a feeling. We build both — identities that look sharp on a business card, a truck door, or a billboard.</p>
-                <ul>
-                  <li>Logo design &amp; variations</li>
-                  <li>Color &amp; typography systems</li>
-                  <li>Brand guidelines</li>
-                  <li>Print-ready file packages</li>
-                </ul>
-              </div>
             </div>
-          </div>
+            <h3 class="service-card__title">Logo &amp; Brand Identity</h3>
+            <p class="service-card__desc">A logo is a mark. A brand is a feeling. We build both — identities that look sharp on a business card, a truck door, or a billboard.</p>
+            <ul class="service-card__list">
+              <li>Logo design &amp; variations</li>
+              <li>Color &amp; typography systems</li>
+              <li>Brand guidelines</li>
+              <li>Print-ready file packages</li>
+            </ul>
+          </article>
 
-          <div class="service reveal" data-service>
-            <button class="service__row" aria-expanded="false">
-              <span class="service__num">03</span>
-              <span class="service__name">Graphic Design</span>
-              <span class="service__icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          <article class="service-card service-card--cyan reveal">
+            <div class="service-card__top">
+              <span class="service-card__badge" aria-hidden="true">
+                <span class="service-card__ring"></span>
+                <span class="service-card__icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".6"/><circle cx="17.5" cy="10.5" r=".6"/><circle cx="8.5" cy="7.5" r=".6"/><circle cx="6.5" cy="12.5" r=".6"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 011.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+                </span>
               </span>
-            </button>
-            <div class="service__body">
-              <div class="service__body-inner">
-                <p>From apparel and signage to flyers and packaging — design that carries your brand into the real world and holds up anywhere it's printed.</p>
-                <ul>
-                  <li>Apparel &amp; merch design</li>
-                  <li>Signage, decals &amp; vehicle wraps</li>
-                  <li>Flyers, cards &amp; print collateral</li>
-                  <li>Ad creative</li>
-                </ul>
-              </div>
             </div>
-          </div>
+            <h3 class="service-card__title">Graphic Design</h3>
+            <p class="service-card__desc">From apparel and signage to flyers and packaging — design that carries your brand into the real world and holds up anywhere it's printed.</p>
+            <ul class="service-card__list">
+              <li>Apparel &amp; merch design</li>
+              <li>Signage, decals &amp; vehicle wraps</li>
+              <li>Flyers, cards &amp; print collateral</li>
+              <li>Ad creative</li>
+            </ul>
+          </article>
 
-          <div class="service reveal" data-service>
-            <button class="service__row" aria-expanded="false">
-              <span class="service__num">04</span>
-              <span class="service__name">Social Media Management</span>
-              <span class="service__icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          <article class="service-card service-card--yellow reveal">
+            <div class="service-card__top">
+              <span class="service-card__badge" aria-hidden="true">
+                <span class="service-card__ring"></span>
+                <span class="service-card__icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 3.9M15.4 6.6l-6.8 3.9"/></svg>
+                </span>
               </span>
-            </button>
-            <div class="service__body">
-              <div class="service__body-inner">
-                <p>Consistent, on-brand content that keeps your business in front of the right people — planned, designed, and posted so you don't have to think about it.</p>
-                <ul>
-                  <li>Content planning &amp; calendars</li>
-                  <li>Post &amp; story design</li>
-                  <li>Page setup &amp; optimization</li>
-                  <li>Monthly reporting</li>
-                </ul>
-              </div>
             </div>
-          </div>
+            <h3 class="service-card__title">Social Media Management</h3>
+            <p class="service-card__desc">Consistent, on-brand content that keeps your business in front of the right people — planned, designed, and posted so you don't have to think about it.</p>
+            <ul class="service-card__list">
+              <li>Content planning &amp; calendars</li>
+              <li>Post &amp; story design</li>
+              <li>Page setup &amp; optimization</li>
+              <li>Monthly reporting</li>
+            </ul>
+          </article>
 
-          <div class="service reveal" data-service>
-            <button class="service__row" aria-expanded="false">
-              <span class="service__num">05</span>
-              <span class="service__name">Content &amp; Strategy</span>
-              <span class="service__icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          <article class="service-card service-card--cyan reveal">
+            <div class="service-card__top">
+              <span class="service-card__badge" aria-hidden="true">
+                <span class="service-card__ring"></span>
+                <span class="service-card__icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 001 1h4"/><path d="M17 21H7a2 2 0 01-2-2V5a2 2 0 012-2h7l5 5v11a2 2 0 01-2 2z"/><path d="M9 13h6M9 17h6M9 9h1"/></svg>
+                </span>
               </span>
-            </button>
-            <div class="service__body">
-              <div class="service__body-inner">
-                <p>The words and the plan behind the visuals — messaging that sounds like you and a strategy that turns attention into customers.</p>
-                <ul>
-                  <li>Brand messaging &amp; copywriting</li>
-                  <li>Launch strategy</li>
-                  <li>Photo &amp; video direction</li>
-                  <li>Ongoing creative support</li>
-                </ul>
-              </div>
             </div>
-          </div>
+            <h3 class="service-card__title">Content &amp; Strategy</h3>
+            <p class="service-card__desc">The words and the plan behind the visuals — messaging that sounds like you and a strategy that turns attention into customers.</p>
+            <ul class="service-card__list">
+              <li>Brand messaging &amp; copywriting</li>
+              <li>Launch strategy</li>
+              <li>Photo &amp; video direction</li>
+              <li>Ongoing creative support</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
@@ -229,43 +222,43 @@
         </div>
 
         <div class="work__grid">
-          <a href="#contact" class="work-card work-card--dark reveal">
-            <div class="work-card__canvas"><img src="assets/clients/nextlevellogo.png" alt="Next Level Dirt & Demo logo" loading="lazy"></div>
+          <a href="#contact" class="work-card reveal">
+            <div class="work-card__canvas work-card__canvas--light"><img src="assets/clients/nextlevellogo.png" alt="Next Level Dirt & Demo logo" loading="lazy"></div>
             <div class="work-card__meta">
               <h3>Next Level Dirt &amp; Demo</h3>
               <p>Website · Brand Identity</p>
             </div>
           </a>
-          <a href="#contact" class="work-card work-card--flood reveal">
-            <div class="work-card__canvas"><img src="assets/clients/corn-belt.png" alt="Corn Belt logo" loading="lazy" class="work-card__full"></div>
+          <a href="#contact" class="work-card reveal">
+            <div class="work-card__canvas work-card__canvas--dark"><img src="assets/clients/corn-belt.png" alt="Corn Belt logo" loading="lazy"></div>
             <div class="work-card__meta">
               <h3>Corn Belt</h3>
               <p>Logo · Brand Identity</p>
             </div>
           </a>
-          <a href="#contact" class="work-card work-card--ink reveal">
-            <div class="work-card__canvas"><img src="assets/clients/north-star-logo-star-yellow.png" alt="North Star logo" loading="lazy"></div>
+          <a href="#contact" class="work-card reveal">
+            <div class="work-card__canvas work-card__canvas--light"><img src="assets/clients/north-star-logo-star-yellow.png" alt="North Star logo" loading="lazy"></div>
             <div class="work-card__meta">
               <h3>North Star</h3>
               <p>Logo Design</p>
             </div>
           </a>
-          <a href="#contact" class="work-card work-card--ink reveal">
-            <div class="work-card__canvas"><img src="assets/clients/pat-png.png" alt="PAT logo" loading="lazy"></div>
+          <a href="#contact" class="work-card reveal">
+            <div class="work-card__canvas work-card__canvas--dark"><img src="assets/clients/pat-png.png" alt="PAT logo" loading="lazy"></div>
             <div class="work-card__meta">
               <h3>PAT</h3>
               <p>Logo · Apparel</p>
             </div>
           </a>
-          <a href="#contact" class="work-card work-card--ink reveal">
-            <div class="work-card__canvas"><img src="assets/clients/motion-server-logo-png.png" alt="Motion Server logo" loading="lazy"></div>
+          <a href="#contact" class="work-card reveal">
+            <div class="work-card__canvas work-card__canvas--light"><img src="assets/clients/motion-server-logo-png.png" alt="Motion Server logo" loading="lazy"></div>
             <div class="work-card__meta">
               <h3>Motion Server</h3>
               <p>Logo · Digital</p>
             </div>
           </a>
-          <a href="#contact" class="work-card work-card--ink reveal">
-            <div class="work-card__canvas"><img src="assets/clients/forgelogo.png" alt="Forge logo" loading="lazy"></div>
+          <a href="#contact" class="work-card reveal">
+            <div class="work-card__canvas work-card__canvas--dark"><img src="assets/clients/forgelogo.png" alt="Forge logo" loading="lazy"></div>
             <div class="work-card__meta">
               <h3>The Forge</h3>
               <p>Logo · Brand Identity</p>
@@ -275,38 +268,37 @@
 
         <p class="work__note reveal">Your brand could be next. <a href="#contact">Let's talk →</a></p>
       </div>
-    </section>
 
-    <!-- ============ CLIENT WALL ============ -->
-    <section class="clients" aria-label="Brands we've worked with">
-      <div class="container">
-        <p class="clients__label reveal">Trusted by brands across the board</p>
-      </div>
-      <div class="clients__marquee">
-        <div class="clients__track">
-          <div class="clients__set">
-            <span class="tile tile--light"><img src="assets/clients/lfd-png-black.png" alt="LFD logo" loading="lazy"></span>
-            <span class="tile tile--dark"><img src="assets/clients/ak-logo.png" alt="AK logo" loading="lazy"></span>
-            <span class="tile tile--light"><img src="assets/clients/pp1776-logo-png.png" alt="PP1776 logo" loading="lazy"></span>
-            <span class="tile tile--dark"><img src="assets/clients/gardab-smart-logo.png" alt="Gardab Smart logo" loading="lazy"></span>
-            <span class="tile tile--light"><img src="assets/clients/shirt-design.png" alt="Shirt design artwork" loading="lazy"></span>
-            <span class="tile tile--dark"><img src="assets/clients/deco-rare-logo-png.png" alt="Deco Rare logo" loading="lazy"></span>
-            <span class="tile tile--flood"><img src="assets/clients/kr-logo.png" alt="KR logo" loading="lazy"></span>
-            <span class="tile tile--dark"><img src="assets/clients/nc-logo-short.png" alt="NC logo" loading="lazy"></span>
-            <span class="tile tile--dark"><img src="assets/clients/logo-png.png" alt="Client logo" loading="lazy"></span>
-            <span class="tile tile--light"><img src="assets/clients/black-logo-png.png" alt="Client logo" loading="lazy"></span>
-          </div>
-          <div class="clients__set" aria-hidden="true">
-            <span class="tile tile--light"><img src="assets/clients/lfd-png-black.png" alt="" loading="lazy"></span>
-            <span class="tile tile--dark"><img src="assets/clients/ak-logo.png" alt="" loading="lazy"></span>
-            <span class="tile tile--light"><img src="assets/clients/pp1776-logo-png.png" alt="" loading="lazy"></span>
-            <span class="tile tile--dark"><img src="assets/clients/gardab-smart-logo.png" alt="" loading="lazy"></span>
-            <span class="tile tile--light"><img src="assets/clients/shirt-design.png" alt="" loading="lazy"></span>
-            <span class="tile tile--dark"><img src="assets/clients/deco-rare-logo-png.png" alt="" loading="lazy"></span>
-            <span class="tile tile--flood"><img src="assets/clients/kr-logo.png" alt="" loading="lazy"></span>
-            <span class="tile tile--dark"><img src="assets/clients/nc-logo-short.png" alt="" loading="lazy"></span>
-            <span class="tile tile--dark"><img src="assets/clients/logo-png.png" alt="" loading="lazy"></span>
-            <span class="tile tile--light"><img src="assets/clients/black-logo-png.png" alt="" loading="lazy"></span>
+      <div class="clients" aria-label="Brands we've worked with">
+        <div class="container">
+          <p class="clients__label reveal">Trusted by brands across the board</p>
+        </div>
+        <div class="clients__marquee">
+          <div class="clients__track">
+            <div class="clients__set">
+              <span class="tile tile--light"><img src="assets/clients/lfd-png-black.png" alt="LFD logo" loading="lazy"></span>
+              <span class="tile tile--dark"><img src="assets/clients/ak-logo.png" alt="AK logo" loading="lazy"></span>
+              <span class="tile tile--light"><img src="assets/clients/pp1776-logo-png.png" alt="PP1776 logo" loading="lazy"></span>
+              <span class="tile tile--dark"><img src="assets/clients/gardab-smart-logo.png" alt="Gardab Smart logo" loading="lazy"></span>
+              <span class="tile tile--light"><img src="assets/clients/shirt-design.png" alt="Shirt design artwork" loading="lazy"></span>
+              <span class="tile tile--dark"><img src="assets/clients/deco-rare-logo-png.png" alt="Deco Rare logo" loading="lazy"></span>
+              <span class="tile tile--light"><img src="assets/clients/kr-logo.png" alt="KR logo" loading="lazy"></span>
+              <span class="tile tile--dark"><img src="assets/clients/nc-logo-short.png" alt="NC logo" loading="lazy"></span>
+              <span class="tile tile--dark"><img src="assets/clients/logo-png.png" alt="Client logo" loading="lazy"></span>
+              <span class="tile tile--light"><img src="assets/clients/black-logo-png.png" alt="Client logo" loading="lazy"></span>
+            </div>
+            <div class="clients__set" aria-hidden="true">
+              <span class="tile tile--light"><img src="assets/clients/lfd-png-black.png" alt="" loading="lazy"></span>
+              <span class="tile tile--dark"><img src="assets/clients/ak-logo.png" alt="" loading="lazy"></span>
+              <span class="tile tile--light"><img src="assets/clients/pp1776-logo-png.png" alt="" loading="lazy"></span>
+              <span class="tile tile--dark"><img src="assets/clients/gardab-smart-logo.png" alt="" loading="lazy"></span>
+              <span class="tile tile--light"><img src="assets/clients/shirt-design.png" alt="" loading="lazy"></span>
+              <span class="tile tile--dark"><img src="assets/clients/deco-rare-logo-png.png" alt="" loading="lazy"></span>
+              <span class="tile tile--light"><img src="assets/clients/kr-logo.png" alt="" loading="lazy"></span>
+              <span class="tile tile--dark"><img src="assets/clients/nc-logo-short.png" alt="" loading="lazy"></span>
+              <span class="tile tile--dark"><img src="assets/clients/logo-png.png" alt="" loading="lazy"></span>
+              <span class="tile tile--light"><img src="assets/clients/black-logo-png.png" alt="" loading="lazy"></span>
+            </div>
           </div>
         </div>
       </div>
@@ -319,6 +311,7 @@
           <p class="section__eyebrow">Pricing</p>
           <h2 class="section__title">Own it outright.<br><span class="outline">Or grow with a plan.</span></h2>
           <p class="pricing__lead reveal">Every project starts with the same real conversation and custom design. How you pay for what happens after launch is up to you.</p>
+          <p class="pricing__deal reveal"><span class="pricing__deal-badge">Limited-time pricing</span> Save up to 36% on monthly care plans right now.</p>
         </div>
 
         <div class="pricing__toggle reveal" role="tablist" aria-label="Pricing options">
@@ -332,6 +325,7 @@
             <div class="pricing__grid">
               <div class="price-card reveal">
                 <h3 class="price-card__name">Starter Care</h3>
+                <p class="price-card__deal"><span class="price-card__was">$55/mo</span><span class="price-card__save">Save 36%</span></p>
                 <p class="price-card__price"><span class="price-card__currency">$</span><strong>35</strong><em>/mo</em></p>
                 <p class="price-card__desc">Keep the lights on. Hosting, security, and small updates — handled.</p>
                 <ul class="price-card__list">
@@ -347,6 +341,7 @@
               <div class="price-card price-card--popular reveal">
                 <p class="price-card__ribbon">Most popular</p>
                 <h3 class="price-card__name">Growth Care</h3>
+                <p class="price-card__deal"><span class="price-card__was">$90/mo</span><span class="price-card__save">Save 33%</span></p>
                 <p class="price-card__price"><span class="price-card__currency">$</span><strong>60</strong><em>/mo</em></p>
                 <p class="price-card__desc">For businesses that update often and want it handled fast.</p>
                 <ul class="price-card__list">
@@ -363,6 +358,7 @@
 
               <div class="price-card reveal">
                 <h3 class="price-card__name">Pro Care</h3>
+                <p class="price-card__deal"><span class="price-card__was">$150/mo</span><span class="price-card__save">Save 33%</span></p>
                 <p class="price-card__price"><span class="price-card__currency">$</span><strong>100</strong><em>/mo</em></p>
                 <p class="price-card__desc">A full creative partner — your site and your socials, covered.</p>
                 <ul class="price-card__list">
@@ -407,13 +403,16 @@
     <section class="section store-teaser" aria-label="Simplee Store">
       <div class="container">
         <div class="store-teaser__band reveal">
-          <div>
-            <h2>New — the <span>Simplee Store</span></h2>
-            <p>Ready-made interactive integrations like our window tint selector, installed on your site and styled to your brand. Fixed price, fast turnaround.</p>
+          <div class="store-teaser__inner">
+            <div>
+              <p class="store-teaser__badge">New</p>
+              <h2>The <span>Simplee Store</span></h2>
+              <p>Ready-made interactive integrations like our window tint selector, installed on your site and styled to your brand. Fixed price, fast turnaround.</p>
+            </div>
+            <a href="store.html" class="btn btn--primary btn--lg magnetic">Browse integrations
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+            </a>
           </div>
-          <a href="store.html" class="btn btn--primary btn--lg magnetic">Browse integrations
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
-          </a>
         </div>
       </div>
     </section>
@@ -448,13 +447,6 @@
             <p>Go live with confidence. We stick around for updates, content, and whatever your brand needs next.</p>
           </div>
         </div>
-
-        <div class="stats reveal">
-          <div class="stat"><span class="stat__num" data-count="50" data-suffix="+">0</span><span class="stat__label">Brands launched</span></div>
-          <div class="stat"><span class="stat__num" data-count="120" data-suffix="+">0</span><span class="stat__label">Projects delivered</span></div>
-          <div class="stat"><span class="stat__num" data-count="100" data-suffix="%">0</span><span class="stat__label">In-house, no outsourcing</span></div>
-          <div class="stat"><span class="stat__num" data-count="24" data-suffix="hr">0</span><span class="stat__label">Response time</span></div>
-        </div>
       </div>
     </section>
 
@@ -476,14 +468,14 @@
           </div>
           <div class="about__team">
             <figure class="member reveal">
-              <div class="member__photo"><img src="assets/team/dylan.jpg" alt="Dylan Spies, co-founder of Simplee Creative" loading="lazy"></div>
+              <div class="member__photo"><img src="assets/team/dylan-cropped.jpg" alt="Dylan Spies, co-founder of Simplee Creative" loading="lazy"></div>
               <figcaption>
                 <strong>Dylan Spies</strong>
                 <span>Co-Founder</span>
               </figcaption>
             </figure>
             <figure class="member reveal">
-              <div class="member__photo"><img src="assets/team/dylon.jpg" alt="Dylon Bauer, co-founder of Simplee Creative" loading="lazy"></div>
+              <div class="member__photo"><img src="assets/team/dylon-cropped.jpg" alt="Dylon Bauer, co-founder of Simplee Creative" loading="lazy"></div>
               <figcaption>
                 <strong>Dylon Bauer</strong>
                 <span>Co-Founder</span>
@@ -494,12 +486,24 @@
       </div>
     </section>
 
+    <!-- ============ STATS ============ -->
+    <section class="stats-band section section--light">
+      <div class="container">
+        <div class="stats reveal">
+          <div class="stat"><span class="stat__num" data-count="50" data-suffix="+">0</span><span class="stat__label">Brands launched</span></div>
+          <div class="stat"><span class="stat__num" data-count="120" data-suffix="+">0</span><span class="stat__label">Projects delivered</span></div>
+          <div class="stat"><span class="stat__num" data-count="100" data-suffix="%">0</span><span class="stat__label">In-house, no outsourcing</span></div>
+          <div class="stat"><span class="stat__num" data-count="24" data-suffix="hr">0</span><span class="stat__label">Response time</span></div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ TESTIMONIALS ============ -->
     <section class="quotes section">
       <div class="container">
         <div class="section__head reveal">
-          <p class="section__eyebrow">Our work speaks for itself</p>
-          <h2 class="section__title">Don't take <span class="outline">our word</span> for it.</h2>
+          <p class="section__eyebrow">Partner satisfaction</p>
+          <h2 class="section__title">We bridge <span class="outline">value and vision</span>.</h2>
         </div>
         <div class="quotes__grid">
           <blockquote class="quote reveal">
@@ -608,6 +612,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=7" defer></script>
+  <script src="js/main.js?v=8" defer></script>
 </body>
 </html>

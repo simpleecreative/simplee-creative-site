@@ -113,22 +113,6 @@
     revealEls.forEach((el) => el.classList.add("in-view"));
   }
 
-  /* ---------- services accordion ---------- */
-  document.querySelectorAll("[data-service]").forEach((service) => {
-    const row = service.querySelector(".service__row");
-    row.addEventListener("click", () => {
-      const isOpen = service.classList.contains("is-open");
-      document.querySelectorAll("[data-service].is-open").forEach((s) => {
-        s.classList.remove("is-open");
-        s.querySelector(".service__row").setAttribute("aria-expanded", "false");
-      });
-      if (!isOpen) {
-        service.classList.add("is-open");
-        row.setAttribute("aria-expanded", "true");
-      }
-    });
-  });
-
   /* ---------- stat counters ---------- */
   const stats = document.querySelectorAll(".stat__num");
   if (stats.length) {
