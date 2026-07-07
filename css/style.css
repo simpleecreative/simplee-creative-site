@@ -300,6 +300,7 @@ a { color: inherit; }
 /* ---------- hero ---------- */
 .hero {
   position: relative;
+  min-height: 100vh;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
@@ -592,7 +593,10 @@ p.hero__eyebrow {
   color: transparent;
   -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.55);
 }
+.outline--yellow { -webkit-text-stroke: 1.5px var(--yellow); }
 .accent { color: var(--cyan-deep); }
+.fill-yellow { color: var(--yellow); }
+.fill-cyan { color: var(--cyan); }
 
 /* ---------- services grid ---------- */
 /* Cards echo the hero's diamond/ring/chip motif (dashed rotating ring,
