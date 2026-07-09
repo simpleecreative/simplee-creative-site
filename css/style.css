@@ -711,15 +711,14 @@ p.hero__eyebrow {
   transition: transform 0.45s var(--ease-spring), box-shadow 0.45s var(--ease-out),
               border-color 0.35s var(--ease-out);
 }
-.work-card:nth-child(even) {
-  --accent: var(--yellow);
-  --accent-glow: rgba(250, 237, 37, 0.3);
-}
 .work-card:hover {
   transform: translateY(-8px);
   border-color: var(--accent);
   box-shadow: 0 28px 64px -22px var(--accent-glow);
 }
+/* Each card's --accent is set inline to a color sampled from its own
+   logo, so the glow always matches the brand it's showing off rather
+   than an arbitrary alternating palette. */
 .work-card__glow {
   position: absolute;
   top: -30%; right: -18%;
@@ -727,12 +726,19 @@ p.hero__eyebrow {
   aspect-ratio: 1;
   border-radius: 50%;
   background: radial-gradient(circle, var(--accent) 0%, transparent 72%);
-  opacity: 0.18;
   filter: blur(46px);
   pointer-events: none;
-  transition: opacity 0.5s var(--ease-out), transform 0.6s var(--ease-out);
+  animation: workGlowPulse 5s ease-in-out infinite;
 }
-.work-card:hover .work-card__glow { opacity: 0.3; transform: scale(1.12); }
+.work-card:nth-child(2) .work-card__glow { animation-delay: -0.8s; }
+.work-card:nth-child(3) .work-card__glow { animation-delay: -1.6s; }
+.work-card:nth-child(4) .work-card__glow { animation-delay: -2.4s; }
+.work-card:nth-child(5) .work-card__glow { animation-delay: -3.2s; }
+.work-card:nth-child(6) .work-card__glow { animation-delay: -4.1s; }
+@keyframes workGlowPulse {
+  0%, 100% { opacity: 0.16; transform: scale(1); }
+  50% { opacity: 0.36; transform: scale(1.18); }
+}
 
 .work-card__canvas {
   position: relative;
