@@ -243,6 +243,8 @@ a { color: inherit; }
   display: grid;
   place-items: center;
   gap: 36px;
+  padding-top: calc(var(--nav-h) + 16px);
+  overflow-y: auto;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.35s var(--ease-out), visibility 0s 0.35s;
