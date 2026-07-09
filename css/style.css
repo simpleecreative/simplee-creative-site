@@ -879,10 +879,10 @@ p.hero__eyebrow {
   position: relative;
   display: grid;
   place-items: center;
-  width: 190px;
-  height: 170px;
+  width: 220px;
+  height: 196px;
   border-radius: 16px;
-  padding: 24px;
+  padding: 20px;
   flex-shrink: 0;
   border: 1.5px solid transparent;
   transition: transform 0.4s var(--ease-spring), border-color 0.4s var(--ease-out),
@@ -894,8 +894,8 @@ p.hero__eyebrow {
   box-shadow: 0 18px 40px -16px var(--accent-glow);
 }
 .tile img {
-  max-width: 68%;
-  max-height: 68%;
+  max-width: 80%;
+  max-height: 80%;
   object-fit: contain;
   transition: transform 0.4s var(--ease-out);
 }
@@ -1824,7 +1824,7 @@ p.hero__eyebrow {
   .about__team { grid-template-columns: 1fr; }
   .member__photo { aspect-ratio: 4 / 4.4; }
   .hero__title { font-size: clamp(34px, 10.5vw, 48px); }
-  .tile { width: 152px; height: 136px; padding: 18px; }
+  .tile { width: 176px; height: 158px; padding: 16px; }
   .pricing__toggle { display: flex; width: 100%; }
   .pricing__tab { flex: 1; text-align: center; padding: 12px 10px; font-size: 13px; }
 }
