@@ -700,13 +700,14 @@ p.hero__eyebrow {
 .work-card {
   --accent: var(--cyan);
   --accent-glow: rgba(67, 198, 236, 0.35);
+  position: relative;
   display: block;
   text-decoration: none;
-  color: inherit;
+  color: var(--text);
   border-radius: calc(var(--radius) + 4px);
   overflow: hidden;
-  background: var(--white);
-  border: 1px solid var(--line-dark);
+  background: linear-gradient(165deg, var(--surface) 0%, var(--ink-2) 100%);
+  border: 1px solid var(--line);
   transition: transform 0.45s var(--ease-spring), box-shadow 0.45s var(--ease-out),
               border-color 0.35s var(--ease-out);
 }
@@ -719,57 +720,70 @@ p.hero__eyebrow {
   border-color: var(--accent);
   box-shadow: 0 28px 64px -22px var(--accent-glow);
 }
+.work-card__glow {
+  position: absolute;
+  top: -30%; right: -18%;
+  width: 62%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 72%);
+  opacity: 0.18;
+  filter: blur(46px);
+  pointer-events: none;
+  transition: opacity 0.5s var(--ease-out), transform 0.6s var(--ease-out);
+}
+.work-card:hover .work-card__glow { opacity: 0.3; transform: scale(1.12); }
 
 .work-card__canvas {
   position: relative;
-  aspect-ratio: 16 / 11;
+  aspect-ratio: 16 / 12;
   display: grid;
   place-items: center;
-  padding: 12%;
+  padding: 8%;
   overflow: hidden;
 }
-/* Each logo gets whichever tone actually contrasts it — some marks are
-   white/gold (need dark), some are black (need light) — rather than one
-   flat color that erases half of them. */
-.work-card__canvas--dark { background: var(--swatch-dark); }
-.work-card__canvas--light { background: var(--swatch-light); }
-.work-card__index {
+/* A soft blurred "spotlight" pool sits behind each logo -- light for
+   marks that need contrast against dark, a faint accent tint for
+   marks that already read fine -- so logos float in glow instead of
+   sitting in a flat colored rectangle. */
+.work-card__canvas::after {
+  content: "";
   position: absolute;
-  top: -0.14em;
-  left: 14px;
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: clamp(72px, 9vw, 108px);
-  line-height: 1;
-  color: transparent;
-  -webkit-text-stroke: 1.5px var(--accent);
-  opacity: 0.4;
+  width: 62%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  filter: blur(36px);
   z-index: 0;
-  user-select: none;
 }
+.work-card__canvas--light::after { background: rgba(255, 255, 255, 0.16); }
+.work-card__canvas--dark::after { background: var(--accent); opacity: 0.16; }
 .work-card__canvas img {
   position: relative;
   z-index: 1;
-  max-width: 58%;
-  max-height: 58%;
+  max-width: 76%;
+  max-height: 76%;
   object-fit: contain;
   transition: transform 0.55s var(--ease-out);
-  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.18));
+  filter: drop-shadow(0 10px 26px rgba(0, 0, 0, 0.45));
 }
-.work-card:hover .work-card__canvas img { transform: scale(1.07); }
+.work-card:hover .work-card__canvas img { transform: scale(1.08); }
 
 .work-card__meta {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 14px;
   padding: 22px 24px;
-  border-top: 1px solid var(--line-dark);
+  background: var(--ink-2);
+  border-top: 1px solid var(--line);
 }
 .work-card__meta h3 {
   font-family: var(--font-display);
   font-size: clamp(18px, 1.9vw, 21px);
   font-weight: 700;
+  color: var(--white);
   text-transform: uppercase;
   letter-spacing: 0;
 }
@@ -782,7 +796,7 @@ p.hero__eyebrow {
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--text-ink-muted);
+  color: var(--text-muted);
 }
 .work-card__tag::before {
   content: "";
@@ -814,10 +828,10 @@ p.hero__eyebrow {
   margin-top: clamp(36px, 5vw, 56px);
   font-size: 18px;
   font-weight: 600;
-  color: var(--text-ink-muted);
+  color: var(--text-muted);
 }
 .work__note a {
-  color: var(--cyan-deep);
+  color: var(--cyan);
   font-weight: 800;
   text-decoration: none;
 }
