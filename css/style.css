@@ -537,6 +537,7 @@ p.hero__eyebrow {
   z-index: 2;
   color: var(--ink);
   padding-block: 18px;
+  transform: rotate(-1.2deg) scale(1.02);
 }
 .marquee::before {
   content: "";
@@ -547,7 +548,6 @@ p.hero__eyebrow {
   bottom: -36px;
   background: var(--yellow);
   border-block: 2px solid var(--ink);
-  transform: rotate(-1.2deg);
   z-index: -1;
 }
 .marquee__track {
