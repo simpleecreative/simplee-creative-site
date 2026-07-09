@@ -861,8 +861,6 @@ p.hero__eyebrow {
   margin-bottom: 40px;
 }
 .clients__marquee {
-  display: grid;
-  gap: 18px;
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
   mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
 }
@@ -871,7 +869,6 @@ p.hero__eyebrow {
   width: max-content;
   animation: marquee 42s linear infinite;
 }
-.clients__track--reverse { animation-direction: reverse; }
 .clients__track:hover { animation-play-state: paused; }
 .clients__set {
   display: flex;
@@ -900,10 +897,9 @@ p.hero__eyebrow {
   max-width: 68%;
   max-height: 68%;
   object-fit: contain;
-  filter: grayscale(1) opacity(0.75);
-  transition: filter 0.4s var(--ease-out);
+  transition: transform 0.4s var(--ease-out);
 }
-.tile:hover img { filter: grayscale(0) opacity(1); }
+.tile:hover img { transform: scale(1.05); }
 .tile--dark { background: var(--swatch-dark); }
 .tile--light { background: var(--swatch-light); }
 
