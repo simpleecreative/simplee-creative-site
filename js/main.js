@@ -201,7 +201,7 @@
   // Paste each plan's Stripe Payment Link here once created. Until then
   // the button falls back to prefilling the contact form.
   const PLAN_LINKS = {
-    "Full Buyout": "",
+    "Full Buyout": "https://buy.stripe.com/5kQbJ0ce55sK0lM9USgQE02",
     "Starter Care": "",
     "Growth Care": "",
     "Pro Care": "",
