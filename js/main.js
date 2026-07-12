@@ -197,10 +197,25 @@
     });
   }
 
-  /* ---------- pricing: plan CTA prefill ---------- */
+  /* ---------- pricing: plan CTAs ---------- */
+  // Paste each plan's Stripe Payment Link here once created. Until then
+  // the button falls back to prefilling the contact form.
+  const PLAN_LINKS = {
+    "Full Buyout": "",
+    "Starter Care": "",
+    "Growth Care": "",
+    "Pro Care": "",
+  };
   document.querySelectorAll("[data-plan]").forEach((el) => {
-    el.addEventListener("click", () => {
+    el.addEventListener("click", (e) => {
       const plan = el.dataset.plan;
+      const link = PLAN_LINKS[plan];
+      if (link) {
+        el.href = link;
+        return; // follow the Stripe Payment Link
+      }
+      // No link yet -- prefill the contact form; the anchor's own
+      // href="#contact" still does the scroll, so no preventDefault.
       const msg = document.getElementById("f-msg");
       if (msg && !msg.value) {
         msg.value = `Hi — I'd like to get started with the ${plan} option.`;
