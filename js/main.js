@@ -204,7 +204,7 @@
     "Full Buyout": "https://buy.stripe.com/5kQbJ0ce55sK0lM9USgQE02",
     "Starter Care": "https://buy.stripe.com/bJe3cua5X6wO6KaffcgQE03",
     "Growth Care": "https://buy.stripe.com/6oU28q5PHf3kfgGc30gQE04",
-    "Pro Care": "",
+    "Pro Care": "https://buy.stripe.com/6oUfZgdi98EW0lM4AygQE05",
   };
   document.querySelectorAll("[data-plan]").forEach((el) => {
     el.addEventListener("click", (e) => {
