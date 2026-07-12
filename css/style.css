@@ -1419,6 +1419,14 @@ p.hero__eyebrow {
 }
 .footer__links a:hover { color: var(--white); }
 .footer__copy { font-size: 13px; color: var(--text-muted); width: 100%; }
+.footer__copy a {
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-decoration-color: rgba(163, 168, 173, 0.4);
+  text-underline-offset: 2px;
+  transition: color 0.25s;
+}
+.footer__copy a:hover { color: var(--cyan); }
 
 /* ---------- store ---------- */
 .nav__links a.is-active { color: var(--white); background: rgba(255, 255, 255, 0.07); }
