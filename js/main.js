@@ -242,7 +242,7 @@
   // Paste each product's Stripe Payment Link here once created in the
   // Stripe dashboard. Until then the button routes to the contact form.
   const STRIPE_LINKS = {
-    "Window Tint Selector": "",
+    "Window Tint Selector": "https://buy.stripe.com/6oU7sKfqh3kC5G67MKgQE01",
   };
   document.querySelectorAll("[data-buy]").forEach((btn) => {
     btn.addEventListener("click", (e) => {
