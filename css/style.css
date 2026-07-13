@@ -1440,6 +1440,62 @@ p.hero__eyebrow {
 }
 .footer__utility a:hover { color: var(--cyan); }
 
+/* ---------- 404 ---------- */
+.notfound {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding-top: var(--nav-h);
+  overflow: hidden;
+}
+.notfound__bg { position: absolute; inset: 0; z-index: -1; }
+.notfound__inner { text-align: center; padding-block: 40px; }
+.notfound__code {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(90px, 16vw, 200px);
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--cyan);
+  opacity: 0.5;
+}
+.notfound__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(32px, 5vw, 54px);
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-top: -0.2em;
+}
+.notfound__sub {
+  max-width: 52ch;
+  margin: 22px auto 0;
+  color: var(--text-muted);
+  font-size: clamp(16px, 1.6vw, 18px);
+}
+.notfound__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 34px;
+}
+.notfound__links {
+  margin-top: 30px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+.notfound__links a {
+  color: var(--cyan);
+  font-weight: 700;
+  text-decoration: none;
+}
+.notfound__links a:hover { text-decoration: underline; }
+
 /* ---------- legal ---------- */
 .legal-hero {
   padding: calc(var(--nav-h) + clamp(56px, 9vw, 100px)) 0 clamp(30px, 5vw, 50px);
